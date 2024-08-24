@@ -418,7 +418,7 @@ function addKhungSuaSanPham(masp) {
             <td>
                 <select>`
                     
-    var company = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom",];
+    var company = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom", "Gdrive", "Duolingo", "Elsa Speak", "Meet", "HBO", "Vieon", ];
     for(var c of company) {
         if(sp.company == c)
             s += (`<option value="`+c+`" selected>`+c+`</option>`);
