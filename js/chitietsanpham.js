@@ -6,7 +6,7 @@ window.onload = function () {
     khoiTao();
 
     // thêm tags (từ khóa) vào khung tìm kiếm
-    var tags = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom",];
+    var tags = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom", "Gdrive","...", ];
     for (var t of tags) addTags(t, "index.html?search=" + t, true);
 
     phanTich_URL_chiTietSanPham();
@@ -44,7 +44,7 @@ function phanTich_URL_chiTietSanPham() {
     var divChiTiet = document.getElementsByClassName('chitietSanpham')[0];
 
     // Đổi title
-    document.title = nameProduct + ' - Thế giới điện thoại';
+    document.title = nameProduct + ' - Duy Khánh Premium Accounts';
 
     // Cập nhật tên h1
     var h1 = divChiTiet.getElementsByTagName('h1')[0];
@@ -124,7 +124,7 @@ function getDetailPromo(sp) {
 
         case 'giamgia':
             var span = `<span style="font-weight: bold">` + sp.promo.value + `</span>`;
-            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi`;
 
         case 'moiramat':
             return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
@@ -132,11 +132,11 @@ function getDetailPromo(sp) {
         case 'giareonline':
             var del = stringToNum(sp.price) - stringToNum(sp.promo.value);
             var span = `<span style="font-weight: bold">` + numToString(del) + `</span>`;
-            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi`;
 
         default:
             var span = `<span style="font-weight: bold">61 xe Wave Alpha</span>`;
-            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi`;
     }
 }
 
