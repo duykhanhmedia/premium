@@ -514,29 +514,31 @@ function addProduct(p, ele, returnString) {
 
 	return addToWeb(product, ele, returnString);
 }
-{/* <a class="fa fa-twitter" href="https://twitter.com/yourprofile" target="_blank" title="Twitter"></a>
-<a class="fa fa-google" href="https://plus.google.com/yourprofile" target="_blank" title="Google+"></a>
-<a class="fa fa-youtube" href="https://www.youtube.com/channel/yourchannel" target="_blank" title="YouTube"></a> */}
+
 // Thêm topnav vào trang
 function addTopNav() {
     document.write(`    
 	<div class="top-nav group">
         <section>
             <div class="social-top-nav">
-                <a class="fa fa-facebook" href="https://www.facebook.com/duykhanhit15" target="_blank" title="Facebook"></a>
+                <a class="fa fa-facebook"></a>
+                <a class="fa fa-twitter"></a>
+                <a class="fa fa-google"></a>
+                <a class="fa fa-youtube"></a>
             </div> <!-- End Social Topnav -->
 
             <ul class="top-nav-quicklink flexContain">
                 <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
+                <li><a href="tintuc.html"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+                <li><a href="tuyendung.html"><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
+                <li><a href="gioithieu.html"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
+                <li><a href="trungtambaohanh.html"><i class="fa fa-wrench"></i> Bảo hành</a></li>
                 <li><a href="lienhe.html"><i class="fa fa-phone"></i> Liên hệ</a></li>
             </ul> <!-- End Quick link -->
         </section><!-- End Section -->
     </div><!-- End Top Nav  -->`);
 }
-{/* <li><a href="tintuc.html"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
-<li><a href="tuyendung.html"><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
-<li><a href="gioithieu.html"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
-<li><a href="trungtambaohanh.html"><i class="fa fa-wrench"></i> Bảo hành</a></li> */}
+
 // Thêm header
 function addHeader() {
     document.write(`        
@@ -562,6 +564,35 @@ function addHeader() {
                     <strong>Từ khóa: </strong>
                 </div>
             </div> <!-- End Search header -->
+
+            <div class="tools-member">
+                <div class="member">
+                    <a onclick="checkTaiKhoan()">
+                        <i class="fa fa-user"></i>
+                        Tài khoản
+                    </a>
+                    <div class="menuMember hide">
+                        <a href="nguoidung.html">Trang người dùng</a>
+                        <a onclick="if(window.confirm('Xác nhận đăng xuất ?')) logOut();">Đăng xuất</a>
+                    </div>
+
+                </div> <!-- End Member -->
+
+                <div class="cart">
+                    <a href="giohang.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="cart-number"></span>
+                    </a>
+                </div> <!-- End Cart -->
+
+                <!--<div class="check-order">
+                    <a>
+                        <i class="fa fa-truck"></i>
+                        <span>Đơn hàng</span>
+                    </a>
+                </div> -->
+            </div><!-- End Tools Member -->
         </div> <!-- End Content -->
     </div> <!-- End Header -->`)
 }
