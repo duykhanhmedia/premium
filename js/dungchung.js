@@ -578,14 +578,6 @@ function addHeader() {
 
                 </div> <!-- End Member -->
 
-                <div class="cart">
-                    <a href="giohang.html">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span>Giỏ hàng</span>
-                        <span class="cart-number"></span>
-                    </a>
-                </div> <!-- End Cart -->
-
                 <!--<div class="check-order">
                     <a>
                         <i class="fa fa-truck"></i>
