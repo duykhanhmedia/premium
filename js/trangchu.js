@@ -25,12 +25,12 @@ window.onload = function () {
 	autocomplete(document.getElementById('search-box'), list_products);
 
 	// thêm tags (từ khóa) vào khung tìm kiếm
-	var tags = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom", "Elsa", "HBO", "Meet", "Vieon"];
+	var tags = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom", "Gdrive","...", ];
 	for (var t of tags) addTags(t, "index.html?search=" + t);
 
 	// Thêm danh sách hãng điện thoại
 	var company = ["canvapro.jpg", "youtube.jpg", "netflix.jpg", "spotify.jpg", "capcut.jpg", "gdrive.jpg",
-		"duolingo.jpg", "elsa.jpg", "meet.jpg", "hbo.jpg", "vieon.jpg", "zoom.jpg" ];
+		"duolingo.jpg", "Elsa.jpg", "meet.jpg", "hbo.jpg", "vieon.jpg"	];
 	for (var c of company) addCompany("img/company/" + c, c.slice(0, c.length - 10));
 
 	// Thêm sản phẩm vào trang
