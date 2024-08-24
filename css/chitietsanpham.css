@@ -1,0 +1,515 @@
+/* Phải thêm .chitietSanpham để không trùng với h1 của taikhoan */
+.chitietSanpham h1 {
+    display: block;
+    margin: 0 0 0 10px;
+    float: left;
+    overflow: hidden;
+    /*khi k đủ chứa text thì phần text bị dư sẽ giấu đi*/
+    font-size: 24px;
+    color: #333;
+    line-height: 40px;
+    /*tăng khoảng cách dòng*/
+}
+
+.rating {
+    float: left;
+    margin-left: 15px;
+    line-height: 40px;
+}
+
+.fa-star,
+.fa-star-o {
+    color: orange;
+}
+
+.rowdetail {
+    display: block;
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 0;
+    margin-top: 5px;
+    clear: both;
+}
+
+.overlaycertainimg {
+    z-index: 14;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    /*Định vị cho thành phần theo cửa sổ trình duyệt*/
+    /*Cho nằm lên trên màn hình*/
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .95);
+    transform: scale(0);
+    transition: .2s ease;
+}
+
+.overlaycertainimg .close {
+    /*Nút tắt hình*/
+    position: absolute;
+    /*Định vị tuyệt đối theo thành phần bao ngoài (cửa sổ trình duyệt)*/
+    top: 15px;
+    right: 45px;
+    font-size: 3rem;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    color: #ccc;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.overlaycertainimg .close:hover {
+    /* color: #fff; */
+    background-color: #f33;
+    border-radius: 50%;
+}
+
+.overlaycertainimg-content {
+    width: 100%;
+}
+
+.overlaycertainimg-content img {
+    background-color: #fff;
+}
+
+.overlaycertainimg-content img.bigimg {
+    /*hình lớn ở certainimg*/
+    height: 540px;
+    display: block;
+    margin: auto;
+}
+
+.overlaycertainimg-content .div_smallimg
+
+/*hình nhỏ ở certainimg*/
+    {
+    display: block;
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.overlaycertainimg-content .div_smallimg:hover {
+    background-color: #222;
+}
+
+.overlaycertainimg-content .div_smallimg img {
+    width: 120px;
+    height: 90px;
+    transform: scale(0.95);
+}
+
+.overlaycertainimg-content .div_smallimg img:hover {
+    transform: scale(1);
+}
+
+.picture {
+    float: left;
+    overflow: hidden;
+    width: 33%;
+    position: relative;
+    /*định vị trí phụ thuộc vào thành phần bao ngoài*/
+    display: block;
+}
+
+.picture img {
+    display: block;
+    height: auto;
+    margin: auto;
+    cursor: pointer;
+    /*thay đổi trỏ chuột đi đưa vào*/
+    max-width: 100%;
+}
+
+.price_sale {
+    float: left;
+    position: relative;
+    width: 33%;
+    display: block;
+}
+
+.area_price {
+    display: block;
+    overflow: hidden;
+    line-height: 20px;
+    padding: 0 10px 10px;
+}
+
+.area_price strong {
+    display: inline-block;
+    /*hối nội tuyến*/
+    overflow: hidden;
+    font-size: 24px;
+    color: #e10c00;
+    vertical-align: middle;
+    /*thành phần sẽ đc canh giữa theo thành phần bao ngoài*/
+    margin-right: 10px;
+}
+
+.area_price span {
+    /* giá tiền gạch ngang */
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    text-decoration: line-through;
+    margin-left: 5px;
+    color: #222;
+}
+
+.area_price label {
+    display: inline-block;
+    position: relative;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 600;
+    /*hiển thị chữ đậm hay chữ thường*/
+    border-radius: 3px;
+    padding: 0 5px 0 8px;
+    height: 18px;
+}
+
+.area_price label.tragop {
+    background: #f28902;
+    margin: 0 0 0 5px;
+}
+
+.area_price label.giamgia {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff9c00), to(#ec1f1f));
+    background-image: -webkit-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
+    background-image: -o-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
+    background-image: linear-gradient(90deg, #ff9c00 0%, #ec1f1f 100%);
+    margin: 0 0 0 5px;
+}
+
+.area_price label.moiramat {
+    background: #1191f8;
+    margin: 0 0 0 5px;
+}
+
+.area_price label.giareonline {
+    background: #3fb846;
+    margin: 0 0 0 5px;
+}
+
+.ship {
+    background-color: #ecf7ed;
+    border-radius: 3px;
+    border: 1px solid #c4ddc8;
+    margin: 5px 10px 10px;
+    padding: 0 10px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.ship img {
+    width: 19px;
+    height: 21px;
+    margin: 4px 10px 0 0;
+    float: left;
+}
+
+.ship div {
+    border-left: 1px solid #c4ddc8;
+    display: block;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-left: 28px;
+    color: #30a43b;
+    max-width: 1200px;
+}
+
+.area_promo {
+    border: 1px solid #ddd;
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    margin: 5px 10px 12px;
+    padding-bottom: 10px;
+}
+
+.area_promo strong {
+    display: block;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 15px 10px 15px;
+    text-transform: uppercase;
+    /*Viết thành chữ hoa*/
+}
+
+.area_promo .promo {
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    padding: 0 15px 5px 40px;
+}
+
+.promo img {
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin: 2px 0 0 -20px;
+}
+
+/* Cải thiện kiểu dáng cho khối .area_order */
+.area_order {
+    display: block;
+    overflow: auto;
+    margin: -280px -50px -50px -50px; /* Khoảng cách giữa khối và các khối xung quanh (trên, phải, dưới, trái) */
+    float: right; /* Căn chỉnh khối về phía bên phải */
+    max-width: 600px; /* Giới hạn chiều rộng của khối nếu cần */
+    box-sizing: content-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
+}
+
+.area_order .buy_now {
+    display: block;
+    overflow: hidden;
+    padding: 30px 10px;
+    border-radius: 5%;
+    font-size: 60px;
+    line-height: normal;
+    color: #fff;
+    text-align: center;
+    background: -webkit-linear-gradient(top, #f59000, #fd6e1d);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.area_order .buy_now:hover {
+    background: -webkit-linear-gradient(top, #fd6e1d, #f59000);
+}
+
+.area_order .buy_now p {
+    display: block;
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+.policy {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding-top: 10px;
+    margin: 0 10px 10px 10px;
+}
+
+.policy strong {
+    display: block;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 15px 10px 15px;
+    text-transform: uppercase;
+    /*Viết thành chữ hoa*/
+}
+.policy div {
+    display: block;
+    overflow: hidden;
+    padding: 5px 0 5px 5px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 10px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.policy div img {
+    background: #fff;
+    display: block;
+    width: 20px;
+    height: 17px;
+    float: left;
+    margin: 3px;
+}
+
+.policy div p {
+    margin: 0 0 0 28px;
+    color: #288ad6;
+}
+
+.policy div.last {
+    border-bottom: 0px;
+}
+
+.info_product {
+    width: 100%; /* Chiều rộng toàn bộ website */
+    border: 1px solid #ddd; /* Đổi từ 100px sang 1px cho đường viền */
+    border-radius: 8px; /* Tăng kích thước bo góc cho đẹp hơn */
+    display: contents; /* Sử dụng display: block để phần tử chiếm toàn bộ chiều rộng */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể của phần tử */
+    padding: 20px; /* Thêm padding cho phần tử */
+    background-color: #f9f9f9; /* Thay đổi màu nền cho phần tử */
+}
+
+.info_product h2 {
+    text-align: end;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Cải thiện kiểu dáng cho phần thông tin sản phẩm */
+.info_product {
+    width: 100%; /* Đặt chiều rộng 100% để chiếm toàn bộ không gian trong khung chứa */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa để phần tử không quá rộng */
+    border: 1px solid #ddd; /* Đường viền mỏng màu xám */
+    border-radius: 8px; /* Bo tròn các góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ để tạo hiệu ứng nổi bật */
+    margin: auto auto; /* Căn giữa và thêm khoảng cách trên/dưới */
+    padding: 10px; /* Thêm khoảng cách bên trong khối */
+    background-color: #ffffff; /* Màu nền trắng cho khối thông tin */
+    font-family: Arial, sans-serif; /* Font chữ cơ bản */
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng tổng cộng */
+    text-align: center; /* Căn giữa tiêu đề */
+
+}
+
+.info_product h2 {
+    font-size: 24px; /* Tăng kích thước chữ cho tiêu đề chính */
+    color: #333; /* Màu chữ tối để tạo độ tương phản tốt */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin: 0 0 15px; /* Loại bỏ khoảng cách trên và thêm khoảng cách dưới */
+    padding: 10px 0; /* Thêm khoảng cách trên và dưới tiêu đề */
+    border-bottom: 2px solid #f2f2f2; /* Đường kẻ dưới tiêu đề để làm nổi bật */
+}
+
+.info_product h3 {
+    font-size: 20px; /* Kích thước chữ cho tiêu đề phụ */
+    color: #555; /* Màu chữ nhẹ hơn cho tiêu đề phụ */
+    margin: 15px 0; /* Thêm khoảng cách trên/dưới */
+        text-align: center; /* Căn giữa tiêu đề */
+
+}
+
+.info_product p {
+    margin: 10px 0; /* Thêm khoảng cách trên/dưới giữa các đoạn văn */
+    line-height: 1.6; /* Khoảng cách dòng để cải thiện khả năng đọc */
+    color: #666; /* Màu chữ nhẹ để đọc dễ dàng */
+}
+
+.info_product ul {
+    list-style-type: none; /* Loại bỏ dấu chấm đầu dòng mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+}
+
+.info_product ul li {
+    padding: 10px 0; /* Thêm khoảng cách trên/dưới cho các mục trong danh sách */
+    border-bottom: 1px solid #ddd; /* Đường phân cách giữa các mục */
+    color: #333; /* Màu chữ chính */
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    align-items: center; /* Căn giữa các biểu tượng emoji và văn bản */
+}
+
+.info_product ul li:last-child {
+    border-bottom: none; /* Loại bỏ đường phân cách dưới mục cuối cùng */
+}
+
+.info_product ul li::before {
+    content: " ";
+    display: inline-block;
+    width: 24px; /* Kích thước biểu tượng emoji */
+    height: 24px; /* Kích thước biểu tượng emoji */
+    margin-right: 10px; /* Khoảng cách giữa biểu tượng và văn bản */
+    background-size: cover;
+}
+
+
+.info {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+.info li {
+    list-style: none;
+    display: table;
+    border-top: 1px solid #eee;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.info li p {
+    clear: both;
+    float: left;
+    margin: 5px 0;
+    width: 40%;
+    color: #666;
+}
+
+.info li div {
+    width: 60%;
+    float: left;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Cải thiện kiểu dáng cho các ô nhập liệu */
+.contact-form {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    float: right; /* Căn chỉnh khối về phía bên phải */
+    max-width: 600px; /* Giới hạn chiều rộng nếu cần */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
+}
+
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Cải thiện kiểu dáng cho phần tử contact-form */
+.contact-form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px; /* Giới hạn chiều rộng tối đa của phần tử */
+    margin: 0 10px 10px 10px;
+    padding-bottom: 5px;
+}
+
+.contact-form strong {
+    display: block;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 0px 25px 25px 15px;
+    text-transform: uppercase;
+    /*Viết thành chữ hoa*/
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Màu sắc của nhãn */
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể của ô nhập liệu */
+    margin-bottom: 16px; /* Khoảng cách giữa các ô nhập liệu */
+    font-size: 16px; /* Kích thước chữ trong ô nhập liệu */
+}
+
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus {
+    border-color: #007BFF; /* Màu sắc đường viền khi ô nhập liệu được chọn */
+    outline: none; /* Loại bỏ đường viền mặc định của trình duyệt */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Tạo hiệu ứng đổ bóng */
+}
+
+.contact-form input::placeholder {
+    color: #888; /* Màu sắc của văn bản placeholder */
+}

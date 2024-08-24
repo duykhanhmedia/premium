@@ -1,0 +1,133 @@
+/* Đặt font và nền chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Định dạng chung cho các phần thông tin */
+.info-left, .guithongtin, .thongtinnhom {
+    max-width: 100%; /* Mở rộng thông tin liên quan từ trái qua phải */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề cho các phần thông tin */
+.info-left h2, .guithongtin p, .thongtinnhom p {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Định dạng nội dung trong các phần thông tin */
+.info-left p, .guithongtin p, .thongtinnhom p {
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* Định dạng các liên kết */
+.info-left a, .guithongtin a, .thongtinnhom a {
+    color: #007bff;
+    text-decoration: none;
+}
+.info-left a:hover, .guithongtin a:hover, .thongtinnhom a:hover {
+    text-decoration: underline;
+}
+
+/* Định dạng các tiêu đề phụ */
+.info-left h3, .thongtinnhom b {
+    color: #444;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Định dạng bảng và ô bảng trong form */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+td input[type="text"], td input[type="email"], td textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+td input[type="text"]:focus, td input[type="email"]:focus, td textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+td button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+td button:hover {
+    background-color: #0056b3;
+}
+
+/* Định dạng header của phần liên hệ */
+.lienhe-header {
+    height: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    padding-left: 10px;
+    background: pink;
+}
+
+/* Định dạng phần thông tin liên hệ */
+.lienhe-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Định dạng phần thông tin cá nhân và tài khoản ngân hàng */
+.info-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Định dạng phần gửi thông tin liên hệ */
+.guithongtin {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Định dạng phần QR codes */
+.qr-codes {
+    margin-top: 20px;
+    text-align: center;
+}
+.qr-code {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+/* Định dạng phần thông tin liên quan */
+.thongtinnhom {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
