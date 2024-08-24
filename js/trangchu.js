@@ -25,7 +25,7 @@ window.onload = function () {
 	autocomplete(document.getElementById('search-box'), list_products);
 
 	// thêm tags (từ khóa) vào khung tìm kiếm
-	var tags = ["Canva Pro", "Youtube Premium", "Netflix", "Spotify", "CapCut Pro", "Google Drive", "Duolingo", "Zoom", "Elsa", "HBO", "Vieon", "Meet];
+	var tags = ["Canva Pro", "Youtube Premium", "Netflix", "Spotify", "CapCut Pro", "Google Drive", "Duolingo", "Zoom", "Elsa", "HBO", "Vieon", "Meet,];
 	for (var t of tags) addTags(t, "index.html?search=" + t);
 
 	// Thêm danh sách hãng điện thoại
