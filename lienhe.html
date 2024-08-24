@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liên hệ - Thế giới điện thoại</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/lienhe.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+    <script src="js/dungchung.js"></script>
+    <script src="js/lienhe.js"></script>
+
+</head>
+
+<body>
+    <script> addTopNav();</script>
+
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+
+        <div class="body-lienhe">
+            <div class="lienhe-header">Liên hệ</div>
+    
+            <div class="lienhe-info">
+                <div class="info-left">
+                    <h2>🌟 Duy Khánh Premium Accounts 🌟</h2>
+                    <div class="section">
+                        <h3>Thông tin cá nhân</h3>
+                        <p>
+                            <b>📞 Telephone:</b> 0345 202 500<br /><br />
+                            <b>📧 E-mail:</b> <a href="mailto:ndkhanh151097@gmail.com">ndkhanh151097@gmail.com</a><br /><br />
+                            <b>📱 Zalo:</b> <a href="https://zalo.me/0345202500">https://zalo.me/0345202500</a><br /><br />
+                            <b>📘 Facebook:</b> <a href="https://www.facebook.com/duykhanhit15/">https://www.facebook.com/duykhanhit15/</a><br /><br />
+                        </p>
+                    </div>
+                    <div class="section">
+                        <h3>Thông tin tài khoản ngân hàng</h3>
+                        <p>
+                            <b>🏦 Vietcombank:</b> 0151000554303<br /><br />
+                            <b>💰 Ví Momo:</b> 0345 202 500<br /><br />
+                            <b>📲 Viettel Pay:</b> 0345 202 500<br /><br />
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="guithongtin">
+                    <p style="font-size: 22px; color: gray">Gửi thông tin liên lạc cho chúng tôi</p>
+                    <hr />
+                    <form name="formlh" onsubmit="return nguoidung()">
+                        <table cellspacing="10px">
+                            <tr>
+                                <td>Họ và tên</td>
+                                <td><input type="text" name="ht" size="40" maxlength="40" placeholder="Họ tên" autocomplete="off" required></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại liên hệ</td>
+                                <td><input type="text" name="sdt" size="40" maxlength="11" minlength="10" placeholder="Điện thoại" required></td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ Email</td>
+                                <td><input type="email" name="em" size="40" placeholder="Email" autocomplete="off" required></td>
+                            </tr>
+                            <tr>
+                                <td>Tiêu đề</td>
+                                <td><input type="text" name="tde" size="40" maxlength="100" placeholder="Tiêu đề" required></td>
+                            </tr>
+                            <tr>
+                                <td>Nội dung</td>
+                                <td><textarea name="nd" rows="5" cols="44" maxlength="500" wrap="physical" placeholder="Nội dung liên hệ" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button type="submit">Gửi thông tin liên hệ</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- <div class="info-right">
+                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=en&amp;q=T%C3%A2n%20b%C3%ACnh+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    <a href="https://www.maps.ie/create-google-map/">Embed Google Map</a>
+                </iframe>
+            </div> -->
+    
+            <div class="thongtinnhom">
+                <p style="font-size: 22px; color: gray">Thông tin liên quan</p>
+                <p>
+                    <b>📊 Dự án:</b> Nâng cấp và mở rộng dịch vụ tài khoản Premium<br /><br />
+                    <b>🗓️ Thời gian thực hiện:</b> Tháng 8, 2024<br /><br />
+                    <b>📍 Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam<br /><br />
+                    <b>📈 Mục tiêu:</b> Cung cấp dịch vụ tài khoản cao cấp với nhiều ưu đãi và hỗ trợ khách hàng tận tình.<br /><br />
+                    <b>💼 Đội ngũ dự án:</b> Các chuyên gia trong lĩnh vực tài chính và công nghệ thông tin<br /><br />
+                    <b>📞 Liên hệ dự án:</b> <a href="mailto:ndkhanh151097@gmail.com">ndkhanh151097@gmail.com</a><br /><br />
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        addContainTaiKhoan();
+    </script>
+
+    <div class="footer">
+        <script>
+            addFooter();
+        </script>
+
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+</body>
+
+</html>
