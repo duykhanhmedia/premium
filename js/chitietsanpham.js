@@ -120,23 +120,23 @@ function getDetailPromo(sp) {
     switch (sp.promo.name) {
         case 'tragop':
             var span = `<span style="font-weight: bold"> lãi suất ` + sp.promo.value + `% </span>`;
-            return `Khách hàng có thể mua trả góp sản phẩm với ` + span + `với thời hạn 6 tháng kể từ khi mua hàng.`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
 
         case 'giamgia':
             var span = `<span style="font-weight: bold">` + sp.promo.value + `</span>`;
-            return `Khách hàng sẽ được giảm ` + span + `₫ khi tới mua trực tiếp tại cửa hàng`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
 
         case 'moiramat':
-            return `Khách hàng sẽ được thử máy miễn phí tại cửa hàng. Có thể đổi trả lỗi trong vòng 2 tháng.`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
 
         case 'giareonline':
             var del = stringToNum(sp.price) - stringToNum(sp.promo.value);
             var span = `<span style="font-weight: bold">` + numToString(del) + `</span>`;
-            return `Sản phẩm sẽ được giảm ` + span + `₫ khi mua hàng online bằng thẻ VPBank hoặc tin nhắn SMS`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
 
         default:
             var span = `<span style="font-weight: bold">61 xe Wave Alpha</span>`;
-            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi`;
+            return `Cơ hội được tặng thêm các sản phẩm đi kèm nếu sử dụng thêm các sản phẩm khác với giá cực kì ưu đãi.`;
     }
 }
 
