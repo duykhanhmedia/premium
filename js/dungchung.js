@@ -514,7 +514,9 @@ function addProduct(p, ele, returnString) {
 
 	return addToWeb(product, ele, returnString);
 }
-
+{/* <a class="fa fa-twitter" href="https://twitter.com/yourprofile" target="_blank" title="Twitter"></a>
+<a class="fa fa-google" href="https://plus.google.com/yourprofile" target="_blank" title="Google+"></a>
+<a class="fa fa-youtube" href="https://www.youtube.com/channel/yourchannel" target="_blank" title="YouTube"></a> */}
 // Thêm topnav vào trang
 function addTopNav() {
     document.write(`    
@@ -531,7 +533,10 @@ function addTopNav() {
         </section><!-- End Section -->
     </div><!-- End Top Nav  -->`);
 }
-
+{/* <li><a href="tintuc.html"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+<li><a href="tuyendung.html"><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
+<li><a href="gioithieu.html"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
+<li><a href="trungtambaohanh.html"><i class="fa fa-wrench"></i> Bảo hành</a></li> */}
 // Thêm header
 function addHeader() {
     document.write(`        
@@ -557,8 +562,7 @@ function addHeader() {
                     <strong>Từ khóa: </strong>
                 </div>
             </div> <!-- End Search header -->
-
-            <div class="tools-member">
+                        <div class="tools-member">
                 <div class="member">
                     <a onclick="checkTaiKhoan()">
                         <i class="fa fa-user"></i>
@@ -693,17 +697,81 @@ function addPlc() {
     <div class="plc">
         <section>
             <ul class="flexContain">
-                <li>Hàng dến tay hỏa tốc trong 3 phút</li>
+                <li>Hàng dến tay hỏa tốc trong 1 phút</li>
                 <li>Thanh toán linh hoạt: tiền mặt, visa / master, trả góp</li>
                 <li>Trải nghiệm sản phẩm hàng đầu</li>
-                <li>Lỗi bảo hành ngày và lập tức</li>
+                <li>Lỗi bảo hành ngay và lập tức</li>
                 <li>Hỗ trợ suốt thời gian sử dụng.
                     <br>Hotline:
-                    <a href="tel:0345 202 500" style="color: #288ad6;">12345678</a>
+                    <a href="tel:https://zalo.me/0345202500" style="color: #288ad6;">0345 202 500</a>
                 </li>
             </ul>
         </section>
     </div>`);
+}
+
+// Test
+function test() {
+    document.addEventListener("DOMContentLoaded", function() {
+    // Lấy tham số từ URL
+    const params = new URLSearchParams(window.location.search);
+    
+    // Kiểm tra nếu có tham số YouTube Premium
+    if (params.has('Youtube-Premium')) {
+        document.getElementById('youtube-premium').style.display = 'block';
+    } 
+    
+    // Kiểm tra nếu có tham số Canva Pro
+    else if (params.has('Canva-Pro')) {
+        document.getElementById('canva-pro').style.display = 'block';
+    }
+
+    // Kiểm tra nếu có tham số Canva Pro
+    else if (params.has('Capcut-Pro')) {
+        document.getElementById('capcut-pro').style.display = 'block';
+    }
+
+    // Kiểm tra nếu có tham số Canva Pro
+    else if (params.has('Spotify')) {
+        document.getElementById('spotify').style.display = 'block';
+    }
+
+    // Kiểm tra nếu có tham số Canva Pro
+    else if (params.has('Google-Drive')) {
+        document.getElementById('gdrive').style.display = 'block';
+    }
+
+    // Kiểm tra nếu có tham số 'netflix'
+    else if (params.has('Netflix')) {
+        document.getElementById('netflix').style.display = 'block';
+    }
+    
+    // Kiểm tra nếu có tham số 'duolingo'
+    else if (params.has('Duolingo')) {
+        document.getElementById('duolingo').style.display = 'block';
+    }
+    // Kiểm tra nếu có tham số 'zoom'
+    else if (params.has('Zoom-Pro')) {
+        document.getElementById('zoom').style.display = 'block';
+    }
+    // Kiểm tra nếu có tham số 'elsa-speak'
+    else if (params.has('Elsa-Speak')) {
+        document.getElementById('elsa-speak').style.display = 'block';
+    }
+    // Kiểm tra nếu có tham số 'meet'
+    else if (params.has('Meet-Premium')) {
+        document.getElementById('meet').style.display = 'block';
+    }
+    // Kiểm tra nếu có tham số 'hbo'
+    else if (params.has('HBO-Premium')) {
+        document.getElementById('hbo').style.display = 'block';
+    }
+    // Kiểm tra nếu có tham số 'vieon'
+    else if (params.has('Vieon-Vip')) {
+        document.getElementById('vieon').style.display = 'block';
+    }
+});
+    
 }
 
 // https://stackoverflow.com/a/2450976/11898496
