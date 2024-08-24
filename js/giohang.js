@@ -6,7 +6,7 @@ window.onload = function () {
 	autocomplete(document.getElementById('search-box'), list_products);
 
 	// thêm tags (từ khóa) vào khung tìm kiếm
-	var tags = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom",];
+	var tags = ["Canva Pro", "Youtube Premium", "CapCut Pro", "Spotify", "Google Drive", "Netflix", "Duolingo", "Zoom", "Gdrive","...", ];
 	for (var t of tags) addTags(t, "index.html?search=" + t)
 
 	currentuser = getCurrentUser();
