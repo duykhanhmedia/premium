@@ -334,6 +334,7 @@
 }
 
 .info_product {
+    display: none;
     width: 100%; /* Chiều rộng toàn bộ website */
     border: 1px solid #ddd; /* Đổi từ 100px sang 1px cho đường viền */
     border-radius: 8px; /* Tăng kích thước bo góc cho đẹp hơn */
@@ -351,6 +352,7 @@
 
 /* Cải thiện kiểu dáng cho phần thông tin sản phẩm */
 .info_product {
+    display: none;
     width: 100%; /* Đặt chiều rộng 100% để chiếm toàn bộ không gian trong khung chứa */
     max-width: 600px; /* Giới hạn chiều rộng tối đa để phần tử không quá rộng */
     border: 1px solid #ddd; /* Đường viền mỏng màu xám */
