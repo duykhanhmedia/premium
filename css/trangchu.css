@@ -1,30 +1,31 @@
 .companyMenu {
     display: flex;
     justify-content: center; /* Canh giữa các logo */
-    gap: 30px; /* Khoảng cách giữa các logo */
-    margin: 50px 0; /* Khoảng cách trên và dưới */
-    padding: 20px 0; /* Khoảng đệm trên và dưới */
+    gap: 20px; /* Khoảng cách giữa các logo */
+    margin: 30px 0; /* Khoảng cách trên và dưới */
+    padding: 15px 0; /* Khoảng đệm trên và dưới */
     background-color: #fff; /* Nền trắng */
 }
 
 .companyMenu a {
     display: inline-block; /* Giữ cho các liên kết hiển thị inline */
-    height: 60px; /* Chiều cao lớn hơn cho không gian */
-    line-height: 60px; /* Canh giữa theo chiều dọc */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease; /* Thêm chuyển tiếp cho kích thước */
+    height: 50px; /* Chiều cao vừa phải */
+    line-height: 50px; /* Canh giữa theo chiều dọc */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Chuyển tiếp cho kích thước */
 }
 
 .companyMenu a img {
-    max-height: 50px; /* Chiều cao tối đa cho hình ảnh */
+    max-height: 40px; /* Chiều cao tối đa cho hình ảnh */
     vertical-align: middle; /* Canh giữa hình ảnh theo chiều dọc */
-    animation: moveAround 10s linear infinite, sizeChange 5s ease-in-out infinite; /* Áp dụng chuyển động và thay đổi kích thước liên tục */
+    animation: moveAround 8s linear infinite, sizeChange 4s ease-in-out infinite; /* Chuyển động và thay đổi kích thước */
 }
 
 .companyMenu a:hover img {
     transform: rotate(360deg); /* Xoay tròn khi hover */
-    filter: brightness(1.2); /* Làm sáng hình ảnh khi hover */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi hover */
+    filter: brightness(1.1); /* Làm sáng hình ảnh khi hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi hover */
 }
+
 
 /* Chuyển động tới lui */
 @keyframes moveAround {
