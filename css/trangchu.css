@@ -1,25 +1,63 @@
 .companyMenu {
-	margin: 50px 50px 50px; 
+    display: flex;
+    justify-content: center; /* Canh giữa các logo */
+    gap: 30px; /* Khoảng cách giữa các logo */
+    margin: 50px 0; /* Khoảng cách trên và dưới */
+    padding: 20px 0; /* Khoảng đệm trên và dưới */
+    background-color: #fff; /* Nền trắng */
 }
 
 .companyMenu a {
-    border: 0px solid #fff;
-    height: 40px;
-    line-height: 40px;
-    transition-duration: .2s;
+    display: inline-block; /* Giữ cho các liên kết hiển thị inline */
+    height: 60px; /* Chiều cao lớn hơn cho không gian */
+    line-height: 60px; /* Canh giữa theo chiều dọc */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease; /* Thêm chuyển tiếp cho kích thước */
 }
 
-.companyMenu a:hover {
-	border: 0px solid #aaa;
-	transform: scale(1.1);
-	z-index: 20;
+.companyMenu a img {
+    max-height: 50px; /* Chiều cao tối đa cho hình ảnh */
+    vertical-align: middle; /* Canh giữa hình ảnh theo chiều dọc */
+    animation: moveAround 10s linear infinite, sizeChange 5s ease-in-out infinite; /* Áp dụng chuyển động và thay đổi kích thước liên tục */
 }
 
-.companyMenu a img{
-    max-height: 50px;
-    vertical-align: auto;
-    margin-top: -20px;
+.companyMenu a:hover img {
+    transform: rotate(360deg); /* Xoay tròn khi hover */
+    filter: brightness(1.2); /* Làm sáng hình ảnh khi hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi hover */
 }
+
+/* Chuyển động tới lui */
+@keyframes moveAround {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(20px) translateY(-10px);
+    }
+    50% {
+        transform: translateX(0px) translateY(10px);
+    }
+    75% {
+        transform: translateX(-20px) translateY(-10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* Thay đổi kích thước liên tục */
+@keyframes sizeChange {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Tăng kích thước lên 20% */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 /* Dropdown From w3 */
 	.dropbtn {
