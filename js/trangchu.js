@@ -2,11 +2,30 @@ window.onload = function () {
 	khoiTao();
 
 	// Thêm hình vào banner
-	addBanner("img/banners/banner0.gif", "img/banners/banner0.gif");
+	// addBanner("img/banners/banner0.gif", "img/banners/banner0.gif");
+	// var numBanner = 5; // Số lượng hình banner
+	// for (var i = 1; i <= numBanner; i++) {
+	// 	var linkimg = "img/banners/banner" + i + ".png";
+	// 	addBanner(linkimg, linkimg);
+	// }
+
+	// Hàm thêm hình vào banner mà không có liên kết
+	function addBanner(imageSrc) {
+		// Tạo phần tử ảnh
+		var img = document.createElement('img');
+		img.src = imageSrc;
+		img.alt = 'Banner Image';
+
+		// Thêm ảnh vào carousel
+		document.querySelector('.owl-carousel').appendChild(img);
+	}
+
+	// Thêm hình vào banner
+	addBanner("img/banners/banner0.gif");
 	var numBanner = 5; // Số lượng hình banner
 	for (var i = 1; i <= numBanner; i++) {
-		var linkimg = "img/banners/banner" + i + ".png";
-		addBanner(linkimg, linkimg);
+		var imgSrc = "img/banners/banner" + i + ".png";
+		addBanner(imgSrc);
 	}
 
 	// Khởi động thư viện hỗ trợ banner - chỉ chạy khi đã tạo hình trong banner
@@ -29,9 +48,14 @@ window.onload = function () {
 	for (var t of tags) addTags(t, "index.html?search=" + t);
 
 	// Thêm danh sách hãng điện thoại
-	var company = ["canvapro.jpg", "youtube.jpg", "netflix.jpg", "spotify.jpg", "capcut.jpg", "gdrive.jpg",
-		"duolingo.jpg", "elsa.jpg", "meet.jpg", "hbo.jpg", "vieon.jpg"	];
-	for (var c of company) addCompany("img/company/" + c, c.slice(0, c.length - 10));
+	var company = ["canva.jpg", "youtube.jpg", "netflix.jpg", "spotify.jpg", "capcut.jpg", "google.jpg",
+		"duolingo.jpg", "elsa.jpg", "Meet.jpg", "hbo.jpg", "vieon.jpg"	];
+	// for (var c of company) addCompany("img/company/" + c, c.slice(0, c.length - 10));
+	for (var c of company) {
+        var imagePath = "img/company/" + c;
+        var name = c.slice(0, c.length - 4); // Loại bỏ đuôi ".jpg"
+        addCompany(imagePath, name);
+    }
 
 	// Thêm sản phẩm vào trang
 	var sanPhamPhanTich
@@ -66,32 +90,32 @@ window.onload = function () {
 	}
 
 	// Thêm chọn mức giá
-	addPricesRange(0, 2000000);
-	addPricesRange(2000000, 4000000);
-	addPricesRange(4000000, 7000000);
-	addPricesRange(7000000, 13000000);
-	addPricesRange(13000000, 0);
+	// addPricesRange(0, 2000000);
+	// addPricesRange(2000000, 4000000);
+	// addPricesRange(4000000, 7000000);
+	// addPricesRange(7000000, 13000000);
+	// addPricesRange(13000000, 0);
 
 	// Thêm chọn khuyến mãi
-	addPromotion('giamgia');
-	addPromotion('tragop');
-	addPromotion('moiramat');
-	addPromotion('giareonline');
+	// addPromotion('giamgia');
+	// addPromotion('tragop');
+	// addPromotion('moiramat');
+	// addPromotion('giareonline');
 
 	// Thêm chọn số sao
-	addStarFilter(3);
-	addStarFilter(4);
-	addStarFilter(5);
+	// addStarFilter(3);
+	// addStarFilter(4);
+	// addStarFilter(5);
 
 	// Thêm chọn sắp xếp
-	addSortFilter('ascending', 'price', 'Giá tăng dần');
-	addSortFilter('decrease', 'price', 'Giá giảm dần');
-	addSortFilter('ascending', 'star', 'Sao tăng dần');
-	addSortFilter('decrease', 'star', 'Sao giảm dần');
-	addSortFilter('ascending', 'rateCount', 'Đánh giá tăng dần');
-	addSortFilter('decrease', 'rateCount', 'Đánh giá giảm dần');
-	addSortFilter('ascending', 'name', 'Tên A-Z');
-	addSortFilter('decrease', 'name', 'Tên Z-A');
+	// addSortFilter('ascending', 'price', 'Giá tăng dần');
+	// addSortFilter('decrease', 'price', 'Giá giảm dần');
+	// addSortFilter('ascending', 'star', 'Sao tăng dần');
+	// addSortFilter('decrease', 'star', 'Sao giảm dần');
+	// addSortFilter('ascending', 'rateCount', 'Đánh giá tăng dần');
+	// addSortFilter('decrease', 'rateCount', 'Đánh giá giảm dần');
+	// addSortFilter('ascending', 'name', 'Tên A-Z');
+	// addSortFilter('decrease', 'name', 'Tên Z-A');
 
 	// Thêm filter đã chọn
 	addAllChoosedFilter();
@@ -591,46 +615,46 @@ function addCompany(img, nameCompany) {
 }
 
 // Thêm chọn mức giá
-function addPricesRange(min, max) {
-	var text = priceToString(min, max);
-	var link = createLinkFilter('add', 'price', min + '-' + max);
+// function addPricesRange(min, max) {
+// 	var text = priceToString(min, max);
+// 	var link = createLinkFilter('add', 'price', min + '-' + max);
 
-	var mucgia = `<a href="` + link + `">` + text + `</a>`;
-	document.getElementsByClassName('pricesRangeFilter')[0]
-		.getElementsByClassName('dropdown-content')[0].innerHTML += mucgia;
-}
+// 	var mucgia = `<a href="` + link + `">` + text + `</a>`;
+// 	document.getElementsByClassName('pricesRangeFilter')[0]
+// 		.getElementsByClassName('dropdown-content')[0].innerHTML += mucgia;
+// }
 
 // Thêm chọn khuyến mãi
-function addPromotion(name) {
-	var link = createLinkFilter('add', 'promo', name);
+// function addPromotion(name) {
+// 	var link = createLinkFilter('add', 'promo', name);
 
-	var text = promoToString(name);
-	var promo = `<a href="` + link + `">` + text + `</a>`;
-	document.getElementsByClassName('promosFilter')[0]
-		.getElementsByClassName('dropdown-content')[0].innerHTML += promo;
-}
+// 	var text = promoToString(name);
+// 	var promo = `<a href="` + link + `">` + text + `</a>`;
+// 	document.getElementsByClassName('promosFilter')[0]
+// 		.getElementsByClassName('dropdown-content')[0].innerHTML += promo;
+// }
 
 // Thêm chọn số lượng sao
-function addStarFilter(value) {
-	var link = createLinkFilter('add', 'star', value);
+// function addStarFilter(value) {
+// 	var link = createLinkFilter('add', 'star', value);
 
-	var text = starToString(value);
-	var star = `<a href="` + link + `">` + text + `</a>`;
-	document.getElementsByClassName('starFilter')[0]
-		.getElementsByClassName('dropdown-content')[0].innerHTML += star;
-}
+// 	var text = starToString(value);
+// 	var star = `<a href="` + link + `">` + text + `</a>`;
+// 	document.getElementsByClassName('starFilter')[0]
+// 		.getElementsByClassName('dropdown-content')[0].innerHTML += star;
+// }
 
 // Thêm chọn sắp xếp theo giá
-function addSortFilter(type, nameFilter, text) {
-	var link = createLinkFilter('add', 'sort', {
-		by: nameFilter,
-		type: type
-	});
-	var sortTag = `<a href="` + link + `">` + text + `</a>`;
+// function addSortFilter(type, nameFilter, text) {
+// 	var link = createLinkFilter('add', 'sort', {
+// 		by: nameFilter,
+// 		type: type
+// 	});
+// 	var sortTag = `<a href="` + link + `">` + text + `</a>`;
 
-	document.getElementsByClassName('sortFilter')[0]
-		.getElementsByClassName('dropdown-content')[0].innerHTML += sortTag;
-}
+// 	document.getElementsByClassName('sortFilter')[0]
+// 		.getElementsByClassName('dropdown-content')[0].innerHTML += sortTag;
+// }
 
 // Chuyển mức giá về dạng chuỗi tiếng việt
 function priceToString(min, max) {
