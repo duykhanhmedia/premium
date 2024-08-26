@@ -735,7 +735,7 @@ function test() {
         document.getElementById('zoom').style.display = 'block';
     }
     // Kiểm tra nếu có tham số 'elsa-speak'
-    else if (params.has('Elsa-Speak')) {
+    else if (params.has('Elsa-Speak-Pro')) {
         document.getElementById('elsa-speak').style.display = 'block';
     }
     // Kiểm tra nếu có tham số 'meet'
@@ -743,11 +743,11 @@ function test() {
         document.getElementById('meet').style.display = 'block';
     }
     // Kiểm tra nếu có tham số 'hbo'
-    else if (params.has('HBO-Premium')) {
+    else if (params.has('HBO')) {
         document.getElementById('hbo').style.display = 'block';
     }
     // Kiểm tra nếu có tham số 'vieon'
-    else if (params.has('Vieon-Vip')) {
+    else if (params.has('Vieon')) {
         document.getElementById('vieon').style.display = 'block';
     }
 });
