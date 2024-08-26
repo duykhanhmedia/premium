@@ -275,11 +275,11 @@ function showTaiKhoan(show) {
 
 // Check xem có ai đăng nhập hay chưa (CurrentUser có hay chưa)
 // Hàm này chạy khi ấn vào nút tài khoản trên header
-function checkTaiKhoan() {
-    if (!getCurrentUser()) {
-        showTaiKhoan(true);
-    }
-}
+// function checkTaiKhoan() {
+//     if (!getCurrentUser()) {
+//         showTaiKhoan(true);
+//     }
+// }
 
 // Tạo event, hiệu ứng cho form tài khoản
 function setupEventTaiKhoan() {
@@ -562,26 +562,6 @@ function addHeader() {
                     <strong>Từ khóa: </strong>
                 </div>
             </div> <!-- End Search header -->
-                        <div class="tools-member">
-                <div class="member">
-                    <a onclick="checkTaiKhoan()">
-                        <i class="fa fa-user"></i>
-                        Tài khoản
-                    </a>
-                    <div class="menuMember hide">
-                        <a href="nguoidung.html">Trang người dùng</a>
-                        <a onclick="if(window.confirm('Xác nhận đăng xuất ?')) logOut();">Đăng xuất</a>
-                    </div>
-
-                </div> <!-- End Member -->
-
-                <!--<div class="check-order">
-                    <a>
-                        <i class="fa fa-truck"></i>
-                        <span>Đơn hàng</span>
-                    </a>
-                </div> -->
-            </div><!-- End Tools Member -->
         </div> <!-- End Content -->
     </div> <!-- End Header -->`)
 }
