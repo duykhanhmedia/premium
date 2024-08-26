@@ -72,7 +72,7 @@ window.onload = function () {
 		document.getElementsByClassName('contain-products')[0].style.display = '';
 
 	} else { // ko có filter : trang chính mặc định sẽ hiển thị các sp hot, ...
-		var soLuong = (window.innerWidth < 1200 ? 4 : 5); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
+		var soLuong = (window.innerWidth < 1200 ? 12 : 15); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
 
 		// Các màu
 		var yellow_red = ['#ff9c00', '#ec1f1f'];
@@ -81,8 +81,8 @@ window.onload = function () {
 
 		// Thêm các khung sản phẩm
 		var div = document.getElementsByClassName('contain-khungSanPham')[0];
-		addKhungSanPham('NỔI BẬT NHẤT', yellow_red, ['star=3', 'sort=rateCount-decrease'], soLuong, div);
-		addKhungSanPham('SẢN PHẨM MỚI', blue, ['promo=moiramat', 'sort=rateCount-decrease'], soLuong, div);
+		addKhungSanPham('NỔI BẬT NHẤT', yellow_red, [''], soLuong, div);
+		// addKhungSanPham('SẢN PHẨM MỚI', blue, ['promo=moiramat', 'sort=rateCount-decrease'], soLuong, div);
 		// addKhungSanPham('TRẢ GÓP 0%', yellow_red, ['promo=tragop', 'sort=rateCount-decrease'], soLuong, div);
 		// addKhungSanPham('GIÁ SỐC ONLINE', green, ['promo=giareonline', 'sort=rateCount-decrease'], soLuong, div);
 		// addKhungSanPham('GIẢM GIÁ LỚN', yellow_red, ['promo=giamgia'], soLuong, div);
@@ -275,11 +275,11 @@ function addKhungSanPham(tenKhung, color, filter, len, ele) {
 	}
 
 	// thêm nút xem tất cả rồi đóng tag
-	s += `	</div>
-			<a class="xemTatCa" href="index.html?` + filter.join('&') + `" style="` + borderA + `">
-				Xem tất cả ` + spResult.length + ` sản phẩm
-			</a>
-		</div> <hr>`;
+	// s += `	</div>
+	// 		<a class="xemTatCa" href="index.html?` + filter.join('&') + `" style="` + borderA + `">
+	// 			Xem tất cả ` + spResult.length + ` sản phẩm
+	// 		</a>
+	// 	</div> <hr>`;
 
 	// thêm khung vào contain-khung
 	ele.innerHTML += s;
